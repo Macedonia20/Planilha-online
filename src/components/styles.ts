@@ -6,13 +6,13 @@ export const Container = styled.header`
   `; 
 
   export const Content = styled.div`
-  max-width: 1000p
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1000px;
   margin: 0 auto;
 
   padding: 2rem 1rem 12rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   button {
       font-size: 1rem;

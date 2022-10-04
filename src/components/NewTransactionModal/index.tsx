@@ -56,20 +56,21 @@ export function NewTransactionModal({ isOpen, onRequestClose}: NewTransactionMod
               <h2>Cadastrar transação</h2>
 
               <input
-               placeholder="Titulo" 
-               value={title}
-               onChange={event => setTitle(event.target.value)}
-               />
+                placeholder="Titulo" 
+                value={title}
+                onChange={event => setTitle(event.target.value)}
+              />
 
 
-               <input type="number" 
-               placeholder="Valor"
-               value={amount}
-               onChange={event => setAmount(Number(event.target.value))}
-               />
+              <input 
+                type="number" 
+                placeholder="Valor"
+                value={amount}
+                onChange={event => setAmount(Number(event.target.value))}
+              />
 
               <TransactionTypeContainer>
-                  <RadioBox 
+                <RadioBox 
                   type="button"
                   onClick={() => { setType('deposit'); }}
                   isActive={type === 'deposit'}
@@ -77,28 +78,28 @@ export function NewTransactionModal({ isOpen, onRequestClose}: NewTransactionMod
                   > 
                   <img src={incomeImg} alt="Entrada" />
                   <span>Entrada</span>
-                 </RadioBox>
+                </RadioBox>
        
-             <RadioBox
-               type="button"
-               onClick={() => { setType('withdraw'); }}
-               isActive={type === 'withdraw'}
-               activeColor="red"
-                >
-                    <img src={outcomeImg} alt="Saída" />
-                    <span>Saída</span>
-             </RadioBox>
+                <RadioBox 
+                  type="button"
+                  onClick={() => { setType('withdraw'); }}
+                  isActive={type === 'withdraw'}
+                  activeColor="red"
+                  >
+                  <img src={outcomeImg} alt="Saída" />
+                  <span>Saída</span>
+                </RadioBox>
               </TransactionTypeContainer>
 
 
-               <input type="categoria"
+              <input 
+                type="categoria"
                 placeholder="Categoria" 
                 value={category}
-               onChange={event => setCategory(event.target.value)}
-                />
-
-               <button type="submit">Cadastrar</button>
-              </Container>  
-            </Modal>
+                onChange={event => setCategory(event.target.value)}
+              />
+              <button type="submit">Cadastrar</button>
+            </Container>  
+          </Modal>
         )
     }
