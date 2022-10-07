@@ -31,7 +31,7 @@ export function Summary() {
        <Container>
             <div>
                 <header>
-                  <p>Entradas</p>
+                  <p>Entradassssss</p>
                   <img src={incomeImg} alt="Entradas" />
                 </header>
                 <strong>
